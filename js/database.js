@@ -2,8 +2,8 @@ window.addEventListener('load', function () {
     console.log('Cette fonction est exécutée une fois quand la page est chargée.');
     if(!localStorage.getItem("personebank")){
         var persone = {
-            login:"Ortega",
-            mdp:"Ortega@123",
+          login:"Dupontblandine",
+          mdp:"Dupontblandine@123",
         }
         localStorage.setItem("connexion","1") // 1 => non | 2 => oui
         localStorage.setItem("personebank",JSON.stringify(persone))
