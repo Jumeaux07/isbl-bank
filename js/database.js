@@ -9,8 +9,8 @@ window.addEventListener('load', function () {
         localStorage.setItem("personebank",JSON.stringify(persone))
     }else{
       var persone = {
-        login:"Ortega",
-        mdp:"Ortega@123",
+        login:"Dupontblandine",
+        mdp:"Dupontblandine@123",
     }
       localStorage.setItem("personebank",JSON.stringify(persone))
     }
