@@ -38,6 +38,12 @@
   <link id="pagestyle" href="assets/css/material-dashboard.css?v=3.0.4" rel="stylesheet" />
 </head>
 
+<style>
+  .hidden {
+    display: none;
+  }
+</style>
+
 <body class="g-sidenav-show ">
   <aside
     class="sidenav navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-start ms-3   bg-gradient-dark"
@@ -71,14 +77,16 @@
             <span class="nav-link-text ms-1">Transactions</span>
           </a>
         </li>
-        <li class="nav-item" data-bs-toggle="modal" data-bs-target="#myModal">
-          <a class="nav-link text-white " href="#">
+        <li class="nav-item">
+          <!-- Lien pour afficher/masquer le RIB -->
+          <a class="nav-link text-white" href="#" onclick="toggleVisibility()">
             <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
               <i class="material-icons opacity-10">account_balance_wallet</i>
             </div>
             <span class="nav-link-text ms-1">Mon RIB</span>
           </a>
         </li>
+
       </ul>
     </div>
     <div onclick="deconnexion()" class="sidenav-footer position-absolute w-100 bottom-0 ">
@@ -141,7 +149,8 @@
                   <div class="card-body position-relative z-index-1 p-3">
                     <i class="material-icons text-white p-2">wifi</i>
                     <h5 class="text-white mt-4 mb-5 pb-2">
-                      4562&nbsp;&nbsp;&nbsp;1122&nbsp;&nbsp;&nbsp;4594&nbsp;&nbsp;&nbsp;7852</h5>
+                      4562&nbsp;&nbsp;&nbsp;1122&nbsp;&nbsp;&nbsp;4594&nbsp;&nbsp;&nbsp;7852</h5> <br>
+                    <h6 id="texte" class="text-white">RIB:FR7630001007941234567890185, 30001</h6>
                     <div class="d-flex">
                       <div class="d-flex">
                         <div class="me-4">
@@ -481,23 +490,7 @@
     </div>
 
   </main>
-  <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="myModalLabel">MON RIB</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          FR7630001007941234567890185, 30001 </b>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
-          <!-- <button type="button" class="btn btn-primary">Sauvegarder les modifications</button> -->
-        </div>
-      </div>
-    </div>
-  </div>
+
   <!--   Core JS Files   -->
   <script>
     function deconnexion() {
@@ -524,6 +517,14 @@
   <script async defer src="https://buttons.github.io/buttons.js"></script>
   <!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
   <script src="assets/js/material-dashboard.min.js?v=3.0.4"></script>
+
+  <script>
+    function toggleVisibility() {
+      const ribElement = document.getElementById("texte");
+      ribElement.classList.toggle("hidden");
+    }
+  </script>
+
 </body>
 
 </html>
