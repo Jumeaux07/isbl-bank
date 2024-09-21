@@ -71,6 +71,14 @@
             <span class="nav-link-text ms-1">Transactions</span>
           </a>
         </li>
+        <li class="nav-item" data-bs-toggle="modal" data-bs-target="#myModal">
+          <a class="nav-link text-white " href="#">
+            <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+              <i class="material-icons opacity-10">account_balance_wallet</i>
+            </div>
+            <span class="nav-link-text ms-1">Mon RIB</span>
+          </a>
+        </li>
       </ul>
     </div>
     <div onclick="deconnexion()" class="sidenav-footer position-absolute w-100 bottom-0 ">
@@ -473,6 +481,23 @@
     </div>
 
   </main>
+  <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="myModalLabel">MON RIB</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          FR7630001007941234567890185, 30001 </b>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+          <!-- <button type="button" class="btn btn-primary">Sauvegarder les modifications</button> -->
+        </div>
+      </div>
+    </div>
+  </div>
   <!--   Core JS Files   -->
   <script>
     function deconnexion() {

@@ -39,3 +39,12 @@ function connexion() {
   }
   console.log(pers);
 }
+
+function getRib() {
+  Swal.fire({
+    title: 'Échec!',
+    text: "<b>",
+    icon: 'success',
+    confirmButtonText: 'OK'
+  })
+}
